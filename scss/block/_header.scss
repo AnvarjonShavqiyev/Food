@@ -1,0 +1,56 @@
+$main-color: #150C01;
+@mixin font($f-family: 'Roboto',$f-width:400,$f-color: $main-color,$f-size:16px,$f-wieght: 400){
+    width: $f-width;
+    color: $f-color;
+    font-family: $f-family;
+    font-size: $f-size;
+    font-style: normal;
+    font-weight: $f-wieght;
+    line-height: normal;
+}
+@mixin dbutton($bborder:none ,$bgcolor:#DC780B,$f-color: #FFF,$f-size:16px,$f-wieght: 400, $bgpadding: 13px 30px,$bradius:5px){
+    border-radius: $bradius;
+    border: $bborder;
+    background-color: $bgcolor;
+    color: $f-color;
+    font-family: 'Roboto';
+    font-size: $f-size;
+    font-style: normal;
+    font-weight: $f-wieght;
+    line-height: normal;
+    padding: $bgpadding;
+}
+nav{
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    height: 46px;
+    justify-content: space-between;
+    .nav__menu{
+        display: flex;
+        gap: 41px;
+        list-style-type: none;
+        margin-left:35px;
+        flex-grow: 1;
+        .menu__item{
+            .nav__link{
+                text-decoration: none;
+                @include font();
+                opacity: 0.6;
+            }
+            .active{
+                text-decoration: none;
+                @include font($f-color:#DC780B,$f-wieght:500);
+                opacity: 1;
+            }
+            .nav__link:hover{
+                text-decoration: none;
+                @include font($f-color:#DC780B,$f-wieght:500);
+                opacity: 1; 
+            }
+        }
+    }
+            .nav__button{
+                @include dbutton();
+            }
+}

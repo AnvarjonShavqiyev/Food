@@ -1,0 +1,60 @@
+.testimonial__wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .section__name{
+        margin-top:213px;
+        @include font($f-color: #DC780B);
+        text-transform: uppercase;
+        letter-spacing: 3.2px;
+        margin-bottom: 12px;
+    }
+    .test__title{
+        @include font($f-width:497px,$f-family:'Philosopher',$f-wieght:700,$f-size:24px);
+        text-align: center;
+        margin-bottom: 23px;
+    }
+    .test__info{
+        @include font($f-width:750px);
+        text-align: center;
+        opacity: 0.7;
+        margin-bottom: 73px;
+    }
+    .corusel{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        img{
+            border-radius: 50%;
+        }
+        .corusel__info{
+            @include font($f-width:506px);
+            text-align: center;
+            margin-top: 41px;
+            margin-bottom: 20px;
+        }
+        .worker{
+            @include font();
+            text-transform: uppercase;
+            margin-top: 32px;
+            margin-bottom: 6px;
+        }
+        .position{
+            @include font();
+            text-transform: uppercase;
+            margin-bottom: 120px;
+        }
+        .corusel_left{
+            position: absolute;
+            top: 125px;
+            left: -170px;
+        }
+        .corusel_right{
+            position: absolute;
+            top: 125px;
+            right: -170px;
+        }
+    }
+}

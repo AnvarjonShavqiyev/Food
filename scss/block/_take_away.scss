@@ -1,0 +1,55 @@
+.take_away{
+    width: 100vw;
+    height: 518px;
+    background-color: #FBF1E7;
+    .take__wrapper{
+        display: flex;
+        align-items: center;
+        gap: 60px;
+        justify-content: center;
+        .take__content{
+            .section__name{
+                @include font($f-color:#DC780B);
+                letter-spacing: 3.2px;
+                text-transform: uppercase;
+                margin-bottom: 5px;
+            }
+            .take__title{
+                @include font($f-width:497px,$f-family:'Philosopher',$f-wieght:700,$f-size:31px);
+                line-height: 41px;
+                margin-bottom: 30px;
+            }
+            .take__info{
+                @include font($f-width:555px);
+                opacity: 0.7;
+                line-height: 24px;
+                margin-bottom: 40px;
+            }
+            .take__btn{
+                display: flex;
+                gap: 30px;
+            }
+            .apple__btn{
+                @include dbutton($bgcolor:$main-color);
+                display: flex;
+                align-items: center;
+                p{
+                    margin-left: 8px;
+                    @include font($f-color:#fff)
+                }
+            }
+            .google__btn{
+                @include dbutton($bgcolor:rgb(255, 255, 255,0),$bborder:2px solid rgb(202, 171, 140,0.5));
+                display: flex;
+                align-items: center;
+                p{
+                    margin-left: 8px;
+                    @include font($f-color:#150C01)
+                }
+            }
+        }
+        .take__img{
+            margin-top: -60px;
+        }
+    }
+}

@@ -1,0 +1,32 @@
+
+.home__wrapper{
+    display: flex;
+    align-items: center;
+    .home__img{
+        width: 801px;
+        height: 670px;
+        background-image: url(../../images/homeimg.png);
+        background-repeat: no-repeat;
+        background-position: left;
+        margin-right: -50px;
+    }
+}
+.home__content{
+    .home__title{
+        @include font($f-width:555px,$f-size:49px,$f-family:'Philosopher',$f-wieght:700px);
+    }
+    .home__info{
+        @include font($f-width:555px,$f-wieght:500px);
+        opacity: 0.6;
+        margin-top: 42px;
+        margin-bottom: 50px;
+    }
+    .order{
+        @include dbutton($bgpadding: 21px 40px);
+        margin-right: 30px;
+    }
+    .detail{
+        @include dbutton($bgpadding: 21px 40px,$bborder: 2px solid rgb(220, 120, 11,0.1),$bgcolor:#fff,$f-color:#DC780B);
+    }
+
+}

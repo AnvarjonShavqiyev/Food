@@ -1,0 +1,47 @@
+footer{
+    width: 100vw;
+    height: 429px;
+    background-color: #252525;;
+    display: flex;
+    align-items: center;
+}
+.footer__wrapper{
+    display: flex;
+    gap: 100px;
+    .with__logo{
+        display: flex;
+        flex-direction: column;
+        gap: 17px;
+        .logo__items{
+            img{
+                margin-bottom: 8px;
+            }
+            a{
+                text-decoration: none;
+                @include font($f-color:rgb(255, 255, 255,0.7));
+            }
+        }
+    }
+    .text__items1{
+        a{
+            text-decoration: none;
+            @include font($f-color:#fff ,$f-width:700px,$f-family:'Philosopher',$f-wieght:700,$f-size:18px);
+        }
+        margin-bottom: 7px;
+    }
+    .with__text{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        .text__items{
+            a{
+                text-decoration: none;
+                @include font($f-color:rgb(255, 255, 255,0.7));      
+            }
+        }
+        .text__logo{
+            display: flex;
+            gap: 10px;
+        }  
+    }
+}

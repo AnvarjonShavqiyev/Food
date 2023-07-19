@@ -1,0 +1,38 @@
+.about__wrapper{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 44px;
+    img{
+        border-radius: 50px;
+    }
+    .about__content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+        
+        .section__name{
+            @include font($f-color:#DC780B);
+            text-transform: uppercase;
+            letter-spacing: 3.2px;
+        }
+        .about__title{
+            @include font($f-width:487px,$f-family:'Philosopher',$f-wieght:700,$f-size:31px);
+            line-height: 41px;
+            margin-top: 10px
+        }
+        .about__info{
+            @include font($f-width:487px);
+            opacity: 0.7;
+            margin-bottom: 29px;
+            margin-top: 30px
+        }
+        .about__btn{
+            @include dbutton();
+            display: flex;
+            justify-content: flex-start;
+            align-self: flex-start;
+        }
+}
+    
+}

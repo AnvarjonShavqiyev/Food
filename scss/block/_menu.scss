@@ -1,0 +1,105 @@
+.menu__wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .section__name{
+        @include font($f-color:#DC780B);
+        text-transform: uppercase;
+    }
+    .menu__title{
+        @include font($f-width:487px,$f-family:'Philosopher',$f-wieght:700,$f-size:31px);
+        line-height: 24px;
+        text-align: center;
+        margin-top: 9px;
+        margin-bottom: 25px;
+    }
+    .menu__info{
+        @include font($f-width:748px);
+        line-height:24px;
+        text-align: center;
+        opacity: 0.7;
+        margin-bottom: 60px;
+    }
+    .menu__list{
+        list-style-type: none;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px 30px;
+        .list__item{
+            width: 360px;
+            height: 446px;
+            background-color: #fff;
+            border-radius: 75px 10px 10px 10px;
+            border: 1px solid rgba(0, 0, 0, 0.10);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .food__img{
+                border-radius: 50px 10px 50px 0px;
+                margin-bottom: 17px;
+            }
+            .food__price{
+                display: flex;
+                width: 310px;
+                justify-content: space-between;
+                .food__name{
+                    @include font($f-width:487px,$f-family:'Philosopher',$f-wieght:700,$f-size:25px);
+                    flex-grow: 1;
+                }
+                .food__price1{
+                    @include font($f-width:30px,$f-family:'Philosopher',$f-wieght:700,$f-size:25px);
+                }
+            }
+            .list__info{
+                @include font($f-width:310px);
+                opacity: 0.7;
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+            .plus{
+                @include dbutton($bgpadding:11px 12px);
+                position: relative;
+            }
+            .plus:hover:before{
+                position: absolute;
+                content: '';
+                width: 0;
+                height: 0;
+                top: -16px;
+                left: 50%;
+                transform: translateX(-50%);
+                border-left: 7px solid transparent;
+                border-right: 7px solid transparent;
+                border-top: 10px solid  rgb(0, 0, 0,0.6);
+            }
+            .plus:hover:after{
+                content: 'Add to card';
+                padding: 5px 8px;
+                border-radius: 10px;
+                background-color: rgb(0, 0, 0,0.6);
+                white-space: nowrap;
+                position: absolute;
+                top: -45px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            .food__rating{
+                display: flex;
+                width: 310px;
+                justify-content: space-between;
+            }
+        }
+    }
+    .menu__btn{
+        @include dbutton($f-color:#DC780B,$bgcolor:#fff,$bborder:1.5px solid #DC780B);
+        margin-top: 50px;
+        margin-bottom: 187px;
+        transition: 0.6s;
+    }
+    .menu__btn:hover{
+        background-color: #DC780B;
+        color: white;
+        transition: 0.6s;
+    }
+}
